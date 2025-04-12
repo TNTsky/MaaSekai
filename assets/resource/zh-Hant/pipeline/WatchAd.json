@@ -1,0 +1,201 @@
+{
+    "每日廣告": {
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "打開地圖",
+            "前往十字路口",
+            "關閉廣告1"
+        ],
+        "interrupt": [
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "點擊畫面上方"
+        ]
+    },
+    "打開地圖": {
+        "recognition": "TemplateMatch",
+        "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
+        "roi": [
+            0,
+            0,
+            120,
+            121
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "前往現實世界",
+            "位於現實世界"
+        ]
+    },
+    "前往現實世界": {
+        "recognition": "TemplateMatch",
+        "template": "前往現實世界按鈕__123__1122_550_96_98__1072_500_196_198.png",
+        "roi": [
+            1060,
+            520,
+            220,
+            201
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "位於現實世界",
+            "前往現實世界"
+        ]
+    },
+    "位於現實世界": {
+        "recognition": "TemplateMatch",
+        "template": "前往虛擬世界按鈕__1125_553_93_99__1075_503_193_199.png",
+        "roi": [
+            1076,
+            513,
+            205,
+            208
+        ],
+        "threshold": 0.8,
+        "next": [
+            "前往十字路口"
+        ]
+    },
+    "前往十字路口": {
+        "recognition": "TemplateMatch",
+        "template": "十字路口圖示__414_306_297_201__364_256_397_301.png",
+        "roi": [
+            1280,
+            720,
+            0,
+            0
+        ],
+        "threshold": 0.64,
+        "action": "Click",
+        "next": [
+            "點擊CM"
+        ],
+        "interrupt": [
+            "滑至最右側"
+        ]
+    },
+    "滑至最右側": {
+        "action": "Swipe",
+        "begin": [
+            1045,
+            262,
+            128,
+            167
+        ],
+        "end": [
+            59,
+            275,
+            50,
+            196
+        ],
+        "duration": 1000
+    },
+    "點擊CM": {
+        "recognition": "TemplateMatch",
+        "template": "CM廣告按鈕__265_144_91_89__215_94_191_189.png",
+        "roi": [
+            1,
+            139,
+            1280,
+            109
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "timeout": 3000,
+        "next": [
+            "觀看廣告"
+        ]
+    },
+    "觀看廣告": {
+        "recognition": "ColorMatch",
+        "lower": [
+            223,
+            223,
+            234
+        ],
+        "upper": [
+            223,
+            223,
+            234
+        ],
+        "count": 5000,
+        "roi": [
+            135,
+            310,
+            1009,
+            38
+        ],
+        "action": "Click",
+        "next": [
+            "開始觀看",
+            "觀看廣告"
+        ],
+        "timeout": 5000
+    },
+    "開始觀看": {
+        "recognition": "TemplateMatch",
+        "template": "開始觀看按鈕__652_513_216_57__602_463_316_157.png",
+        "roi": [
+            602,
+            461,
+            317,
+            158
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "關閉廣告1"
+        ],
+        "interrupt": [
+            "等待廣告"
+        ]
+    },
+    "關閉廣告1": {
+        "recognition": "TemplateMatch",
+        "template": "廣告右上X__1182_37_30_27__1132_0_130_114.png",
+        "threshold": 0.7,
+        "roi": [
+            1132,
+            0,
+            130,
+            114
+        ],
+        "action": "Click",
+        "next": [
+            "關閉廣告1",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
+        ]
+    },
+    "關閉廣告2": {
+        "recognition": "FeatureMatch",
+        "template": "廣告右上X-2__1182_37_30_27__1132_0_130_114.png",
+        "roi": [
+            1132,
+            0,
+            130,
+            114
+        ],
+        "action": "Click",
+        "next": [
+            "關閉廣告1",
+            "關閉廣告2",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
+        ]
+    },
+    "關閉廣告3": {},
+    "關閉廣告4": {},
+    "等待廣告": {
+        "action": "DoNothing"
+    }
+}
