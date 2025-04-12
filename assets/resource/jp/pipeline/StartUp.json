@@ -1,0 +1,256 @@
+{
+    "世界計畫啟動": {
+        "action": "StartApp",
+        "package": "com.sega.pjsekai",
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "登入帳號-點擊右上選單",
+            "下載資料",
+            "資料下載中",
+            "通知頁面",
+            "遊戲內"
+        ],
+        "interrupt": [
+            "返回按鈕",
+            "繼續等待"
+        ]
+    },
+    "標題前頁面": {
+        "recognition": "ColorMatch",
+        "roi": [
+            442,
+            0,
+            429,
+            122
+        ],
+        "lower": [
+            255,
+            255,
+            255
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ],
+        "count": 50000,
+        "action": "Click",
+        "target": [
+            435,
+            0,
+            273,
+            96
+        ],
+        "post_delay": 500,
+        "next": [
+            "標題前頁面",
+            "通知頁面",
+            "遊戲內",
+            "登入帳號-點擊右上選單"
+        ],
+        "interrupt": [
+            "繼續等待"
+        ]
+    },
+    "登入帳號-點擊右上選單": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "右上角選單__1222_29_30_27__1172_0_108_106.png",
+        "roi": [
+            943,
+            0,
+            335,
+            91
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "點擊帳號引繼"
+        ]
+    },
+    "點擊帳號引繼": {
+        "recognition": "TemplateMatch",
+        "template": "帳號引繼按鈕__314_252_321_62__264_202_421_162.png",
+        "roi": [
+            264,
+            202,
+            421,
+            162
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "GP連攜"
+        ]
+    },
+    "GP連攜": {
+        "recognition": "TemplateMatch",
+        "template": "GooglePlay連攜按鈕__661_222_291_64__611_172_391_164.png",
+        "roi": [
+            637,
+            204,
+            338,
+            97
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "確認連攜"
+        ]
+    },
+    "確認連攜": {
+        "recognition": "TemplateMatch",
+        "template": "確認連攜按鈕__648_509_223_64__598_459_323_164.png",
+        "roi": [
+            598,
+            459,
+            323,
+            164
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "標題頁面"
+        ],
+        "interrupt": [
+            "繼續等待"
+        ]
+    },
+    "標題頁面": {
+        "recognition": "TemplateMatch",
+        "template": "標題頁面-右上圖標__1104_20_52_50__1054_0_152_120.png",
+        "roi": [
+            891,
+            0,
+            389,
+            87
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": [
+            435,
+            0,
+            273,
+            96
+        ],
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "下載資料",
+            "資料下載中",
+            "通知頁面",
+            "遊戲內"
+        ],
+        "interrupt": [
+            "繼續等待"
+        ]
+    },
+    "下載資料": {
+        "recognition": "TemplateMatch",
+        "template": "下載按鈕__653_513_214_56__603_463_314_156.png",
+        "roi": [
+            653,
+            513,
+            214,
+            56
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "下載資料",
+            "資料下載中",
+            "通知頁面",
+            "遊戲內"
+        ],
+        "interrupt": [
+            "回到遊戲畫面"
+        ]
+    },
+    "資料下載中": {
+        "recognition": "TemplateMatch",
+        "template": "左下 資料下載中__22_635_145_37__0_585_217_135.png",
+        "roi": [
+            22,
+            635,
+            145,
+            37
+        ],
+        "threshold": 0.8,
+        "post_delay": 2000,
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "下載資料",
+            "通知頁面",
+            "遊戲內"
+        ],
+        "interrupt": [
+            "繼續等待"
+        ]
+    },
+    "通知頁面": {
+        "recognition": "TemplateMatch",
+        "template": "左上通知頁面__137_22_132_37__87_0_232_109.png",
+        "roi": [
+            87,
+            0,
+            232,
+            109
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": [
+            1134,
+            34,
+            25,
+            23
+        ],
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "遊戲內"
+        ],
+        "interrupt": [
+            "回到遊戲畫面"
+        ]
+    },
+    "遊戲內": {
+        "recognition": "TemplateMatch",
+        "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
+        "roi": [
+            0,
+            0,
+            120,
+            121
+        ],
+        "threshold": 0.8,
+        "timeout": 4000,
+        "next": [
+            "標題前頁面",
+            "標題頁面",
+            "通知頁面"
+        ],
+        "interrupt": [
+            "返回按鈕"
+        ]
+    },
+    "繼續等待": {
+        "action": "Click",
+        "target": [
+            435,
+            0,
+            273,
+            96
+        ],
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "加載資料中",
+            "回到遊戲畫面"
+        ]
+    }
+}

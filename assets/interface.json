@@ -1,46 +1,82 @@
 {
+    "version": "1.0",
+    "message": "Welcome to MaaSekai!",
     "controller": [
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
-            }
         }
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "日服",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/resource/jp"
             ]
         },
         {
-            "name": "B 服",
+            "name": "繁中服",
             "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
+                "{PROJECT_DIR}/resource/zh-Hant"
             ]
         }
     ],
     "agent": {
         "child_exec": "python",
         "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
+            "{PROJECT_DIR}/../agent/main.py"
         ]
     },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "啟動遊戲",
+            "entry": "世界計畫啟動",
+            "option": [
+                "GP引繼"
+            ]
         },
         {
-            "name": "选项任务",
+            "name": "每日CM",
+            "entry": "每日廣告"
+        },
+        {
+            "name": "廣告換歌",
+            "entry": "廣告換歌"
+        },
+        {
+            "name": "領取禮物",
+            "entry": "領取禮物"
+        },
+        {
+            "name": "領取任務",
+            "entry": "領取任務"
+        },
+        {
+            "name": "挑戰Live",
+            "entry": "challenge_live"
+        },
+        {
+            "name": "單人Live",
+            "entry": "solo_live",
+            "option": [
+                "選擇隊伍",
+                "自動配隊"
+            ]
+        },
+        {
+            "name": "虛擬Live",
+            "entry": "virtual_live"
+        },
+        {
+            "name": "活動劇情",
+            "entry": "event_story"
+        },
+        {
+            "name": "活動商店",
+            "entry": "event_store"
+        },
+        {
+            "name": "活動",
             "entry": "MyTask2",
             "option": [
                 "任务选项1"
@@ -60,23 +96,76 @@
         }
     ],
     "option": {
+        "GP引繼": {
+            "default_case": "否",
+            "cases": [
+                {
+                    "name": "是",
+                    "pipeline_override": {
+                        "登入帳號-點擊右上選單": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "pipeline_override": {
+                        "登入帳號-點擊右上選單": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "選擇隊伍": {
+            "cases": [
+                {
+                    "name": "隊伍1",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "隊伍2",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "隊伍3",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "隊伍4",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "隊伍5",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "自動配隊": {
+            "cases": [
+                {
+                    "name": "是",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "否",
+                    "pipeline_override": {}
+                }
+            ]
+        },
         "任务选项1": {
             "cases": [
                 {
                     "name": "文本1",
                     "pipeline_override": {
                         "OcrTask": {
-                            "text": "文本1"
+                            "action": "Click"
                         }
                     }
                 },
                 {
                     "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
+                    "pipeline_override": {}
                 }
             ]
         }

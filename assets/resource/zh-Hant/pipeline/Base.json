@@ -1,0 +1,152 @@
+{
+    "回到遊戲畫面": {
+        "action": "StartApp",
+        "package": "com.hermes.mk.asia"
+    },
+    "已在主畫面": {
+        "recognition": "TemplateMatch",
+        "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
+        "roi": [
+            0,
+            0,
+            120,
+            121
+        ]
+    },
+    "回到主畫面": {
+        "recognition": "TemplateMatch",
+        "template": "右上角選單__1222_29_30_27__1172_0_108_106.png",
+        "roi": [
+            1172,
+            0,
+            108,
+            106
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "回到主畫面2"
+        ]
+    },
+    "回到主畫面2": {
+        "recognition": "TemplateMatch",
+        "template": "主畫面按鈕__1128_534_104_83__1078_484_202_183.png",
+        "roi": [
+            628,
+            0,
+            652,
+            720
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "post_delay": 500
+    },
+    "返回按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "左上返回按鈕__25_24_38_38__0_0_113_112.png",
+        "roi": [
+            0,
+            0,
+            113,
+            112
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        }
+    },
+    "點擊畫面上方": {
+        "action": "Click",
+        "target": [
+            435,
+            0,
+            273,
+            96
+        ]
+    },
+    "跳過劇情對話": {
+        "recognition": "TemplateMatch",
+        "template": "右上 劇情內選單__1217_26_41_34__1167_0_113_110.png",
+        "roi": [
+            1217,
+            26,
+            41,
+            34
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "點擊跳過按鈕"
+        ]
+    },
+    "點擊跳過按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "跳過按鈕__1070_284_60_35__1020_234_160_135.png",
+        "roi": [
+            1017,
+            -6,
+            264,
+            535
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "確認跳過",
+            "連續觀看",
+            "點擊跳過按鈕"
+        ]
+    },
+    "確認跳過": {
+        "recognition": "TemplateMatch",
+        "template": "跳過劇情確認按鈕__648_392_224_63__598_342_324_163.png",
+        "roi": [
+            191,
+            191,
+            894,
+            334
+        ],
+        "threshold": 0.8,
+        "action": "Click"
+    },
+    "連續觀看": {
+        "recognition": "TemplateMatch",
+        "template": "連續觀看確認__548_394_184_65__498_344_284_165.png",
+        "roi": [
+            197,
+            195,
+            887,
+            339
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "跳過劇情對話"
+        ]
+    },
+    "加載資料中": {
+        "recognition": "TemplateMatch",
+        "template": "右下初音加載中__1127_571_118_98__1077_521_203_198.png",
+        "roi": [
+            1098,
+            549,
+            189,
+            170
+        ],
+        "threshold": 0.8,
+        "action": "DoNothing"
+    },
+    "點擊X號": {
+        "recognition": "TemplateMatch",
+        "template": "X號__993_144_23_23__943_94_123_123.png",
+        "roi": [
+            592,
+            0,
+            688,
+            403
+        ],
+        "threshold": 0.8,
+        "action": "Click"
+    }
+}

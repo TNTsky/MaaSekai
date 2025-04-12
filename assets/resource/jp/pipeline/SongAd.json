@@ -1,0 +1,220 @@
+{
+    "廣告換歌": {
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "打開地圖-2",
+            "前往唱片行",
+            "關閉廣告1-2"
+        ],
+        "interrupt": [
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "點擊畫面上方"
+        ]
+    },
+    "打開地圖-2": {
+        "recognition": "TemplateMatch",
+        "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
+        "roi": [
+            0,
+            0,
+            120,
+            121
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "前往現實世界-2",
+            "位於現實世界-2"
+        ]
+    },
+    "前往現實世界-2": {
+        "recognition": "TemplateMatch",
+        "template": "前往現實世界按鈕__123__1122_550_96_98__1072_500_196_198.png",
+        "roi": [
+            1060,
+            520,
+            220,
+            201
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "next": [
+            "位於現實世界-2",
+            "前往現實世界-2"
+        ]
+    },
+    "位於現實世界-2": {
+        "recognition": "TemplateMatch",
+        "template": "前往虛擬世界按鈕__1125_553_93_99__1075_503_193_199.png",
+        "roi": [
+            1076,
+            513,
+            205,
+            208
+        ],
+        "threshold": 0.8,
+        "next": [
+            "前往唱片行"
+        ],
+        "interrupt": [
+            "滑至右下角"
+        ]
+    },
+    "滑至右下角": {
+        "action": "Swipe",
+        "begin": [
+            1045,
+            262,
+            128,
+            167
+        ],
+        "end": [
+            59,
+            275,
+            50,
+            196
+        ],
+        "duration": 1000,
+        "post_wait_freezes": 2000
+    },
+    "前往唱片行": {
+        "recognition": "TemplateMatch",
+        "template": "唱片行圖示__662_177_116_167__612_127_216_267.png",
+        "roi": [
+            1280,
+            720,
+            0,
+            0
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "post_wait_freezes": 300,
+        "next": [
+            "點擊唱片行按鈕"
+        ],
+        "interrupt": [
+            "滑至最右側-2"
+        ]
+    },
+    "滑至最右側-2": {
+        "action": "Swipe",
+        "begin": [
+            1045,
+            262,
+            128,
+            167
+        ],
+        "end": [
+            59,
+            275,
+            50,
+            196
+        ],
+        "duration": 1000
+    },
+    "點擊唱片行按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "唱片行按鈕__476_197_130_98__426_147_230_198.png",
+        "roi": [
+            56,
+            183,
+            1047,
+            151
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "點擊唱片行按鈕",
+            "已完售",
+            "點擊第一首歌"
+        ]
+    },
+    "已完售": {
+        "recognition": "TemplateMatch",
+        "template": "歌曲已完售__135_302_126_24__85_252_226_124.png",
+        "roi": [
+            82,
+            268,
+            232,
+            88
+        ],
+        "threshold": 0.8,
+        "next": [
+            "返回按鈕"
+        ]
+    },
+    "點擊第一首歌": {
+        "target": [
+            107,
+            196,
+            180,
+            181
+        ],
+        "action": "Click",
+        "timeout": 3000,
+        "next": [
+            "觀看廣告來交換"
+        ]
+    },
+    "觀看廣告來交換": {
+        "recognition": "TemplateMatch",
+        "template": "觀看廣告來交換按鈕__547_639_189_34__497_589_289_131.png",
+        "roi": [
+            271,
+            474,
+            751,
+            234
+        ],
+        "threshold": 0.999999,
+        "action": "Click",
+        "next": [
+            "開始觀看-2"
+        ]
+    },
+    "開始觀看-2": {
+        "recognition": "TemplateMatch",
+        "template": "開始觀看按鈕__652_513_216_57__602_463_316_157.png",
+        "roi": [
+            177,
+            120,
+            911,
+            518
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "關閉廣告1-2"
+        ],
+        "interrupt": [
+            "等待廣告-2"
+        ]
+    },
+    "關閉廣告1-2": {
+        "recognition": "TemplateMatch",
+        "template": "廣告右上X__1182_37_30_27__1132_0_130_114.png",
+        "threshold": 0.7,
+        "roi": [
+            1132,
+            0,
+            130,
+            114
+        ],
+        "action": "Click",
+        "next": [
+            "返回按鈕"
+        ],
+        "interrupt": [
+            "點擊畫面上方"
+        ]
+    },
+    "等待廣告-2": {
+        "action": "DoNothing"
+    }
+}
