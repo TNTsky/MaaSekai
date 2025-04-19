@@ -1,0 +1,216 @@
+{
+    "挑戰Live": {
+        "post_delay": 1000,
+        "next": [
+            "挑戰Live按鈕"
+        ],
+        "interrupt": [
+            "點擊右下Live按鈕",
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "確認跳過",
+            "點擊畫面上方"
+        ]
+    },
+    "挑戰Live按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "挑戰Live按鈕__623_356_277_70__573_306_377_170.png",
+        "roi": [
+            573,
+            306,
+            377,
+            170
+        ],
+        "threshold": 0.8,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "今日挑戰Live已完成",
+            "點擊挑戰Live按鈕"
+        ]
+    },
+    "今日挑戰Live已完成": {
+        "recognition": "TemplateMatch",
+        "template": "驚嘆號提示__142_93_24_24__92_43_124_124.png",
+        "roi": [
+            833,
+            286,
+            136,
+            135
+        ],
+        "threshold": 0.4,
+        "inverse": true,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "已在主畫面"
+        ],
+        "interrupt": [
+            "返回按鈕"
+        ]
+    },
+    "點擊挑戰Live按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "挑戰Live按鈕__623_356_277_70__573_306_377_170.png",
+        "roi": [
+            573,
+            306,
+            377,
+            170
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "選擇Live角色",
+            "點擊挑戰Live按鈕"
+        ]
+    },
+    "選擇Live角色": {
+        "recognition": "TemplateMatch",
+        "template": "挑戰Live角色-初音__196_494_139_56__146_444_239_156.png",
+        "roi": [
+            146,
+            444,
+            239,
+            156
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "決定歌曲",
+            "選擇Live角色"
+        ]
+    },
+    "決定歌曲": {
+        "recognition": "TemplateMatch",
+        "template": "決定歌曲按鈕__928_554_160_62__878_504_260_162.png",
+        "roi": [
+            878,
+            504,
+            260,
+            162
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "開啟Live-Auto",
+            "Live-Auto已開啟",
+            "決定歌曲"
+        ]
+    },
+    "開啟Live-Auto": {
+        "recognition": "TemplateMatch",
+        "template": "Auto未開啟__571_623_103_67__521_573_203_147.png",
+        "roi": [
+            521,
+            573,
+            203,
+            147
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "Live-Auto已開啟"
+        ]
+    },
+    "Live-Auto已開啟": {
+        "recognition": "TemplateMatch",
+        "template": "Auto已開啟__571_623_103_67__521_573_203_147.png",
+        "roi": [
+            521,
+            573,
+            203,
+            147
+        ],
+        "threshold": 0.8,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "開始挑戰Live"
+        ]
+    },
+    "開始挑戰Live": {
+        "recognition": "TemplateMatch",
+        "template": "開始挑戰Live按鈕__952_489_117_117__902_439_217_217.png",
+        "roi": [
+            902,
+            439,
+            217,
+            217
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "正在挑戰Live"
+        ]
+    },
+    "正在挑戰Live": {
+        "recognition": "TemplateMatch",
+        "template": "右上暫停按鈕__1195_16_57_58__1145_0_135_124.png",
+        "roi": [
+            1145,
+            0,
+            135,
+            124
+        ],
+        "threshold": 0.8,
+        "post_wait_freezes": {
+            "time": 10000,
+            "rate_limit": 1000
+        },
+        "timeout": 1800000,
+        "next": [
+            "挑戰Live結束"
+        ]
+    },
+    "挑戰Live結束": {
+        "recognition": "TemplateMatch",
+        "template": "右上暫停按鈕__1195_16_57_58__1145_0_135_124.png",
+        "roi": [
+            1145,
+            0,
+            135,
+            124
+        ],
+        "rate_limit": 5000,
+        "threshold": 0.8,
+        "inverse": true,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "已在主畫面"
+        ],
+        "interrupt": [
+            "點擊挑戰Live按鈕",
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "確認跳過",
+            "點擊畫面上方"
+        ]
+    }
+}

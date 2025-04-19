@@ -53,15 +53,11 @@
         },
         {
             "name": "挑戰Live",
-            "entry": "challenge_live"
+            "entry": "挑戰Live"
         },
         {
             "name": "單人Live",
-            "entry": "solo_live",
-            "option": [
-                "選擇隊伍",
-                "自動配隊"
-            ]
+            "entry": "單人Live"
         },
         {
             "name": "虛擬Live",
@@ -76,11 +72,8 @@
             "entry": "event_store"
         },
         {
-            "name": "活動",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "關閉遊戲",
+            "entry": "世界計畫關閉"
         },
         {
             "name": "参数任务",

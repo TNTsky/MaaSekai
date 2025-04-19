@@ -106,7 +106,7 @@
             1280,
             109
         ],
-        "threshold": 0.8,
+        "threshold": 0.4,
         "action": "Click",
         "timeout": 3000,
         "next": [
@@ -116,22 +116,23 @@
     "觀看廣告": {
         "recognition": "ColorMatch",
         "lower": [
-            223,
-            223,
-            234
+            255,
+            119,
+            170
         ],
         "upper": [
-            223,
-            223,
-            234
+            255,
+            119,
+            170
         ],
-        "count": 5000,
+        "count": 1200,
         "roi": [
-            135,
-            310,
-            1009,
-            38
+            243,
+            117,
+            646,
+            29
         ],
+        "connected": true,
         "action": "Click",
         "next": [
             "開始觀看",

@@ -1,0 +1,81 @@
+{
+    "領取任務": {
+        "next": [
+            "點擊任務按鈕"
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "interrupt": [
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "確認跳過",
+            "點擊畫面上方"
+        ]
+    },
+    "點擊任務按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "任務列表圖示__1212_207_58_61__1162_157_118_161.png",
+        "roi": [
+            1174,
+            76,
+            110,
+            329
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 5000,
+        "next": [
+            "點擊領取全部-1",
+            "點擊任務驚嘆號"
+        ],
+        "interrupt": [
+            "點擊X號"
+        ]
+    },
+    "點擊領取全部-1": {
+        "recognition": "TemplateMatch",
+        "template": "領取全部按鈕__1045_640_196_47__995_590_285_130.png",
+        "roi": [
+            995,
+            590,
+            285,
+            130
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 5000,
+        "next": [
+            "點擊領取全部-1",
+            "點擊任務驚嘆號"
+        ],
+        "interrupt": [
+            "點擊X號"
+        ]
+    },
+    "點擊任務驚嘆號": {
+        "recognition": "TemplateMatch",
+        "template": "驚嘆號提示__142_93_24_24__92_43_124_124.png",
+        "roi": [
+            79,
+            31,
+            156,
+            420
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 5000,
+        "next": [
+            "點擊領取全部-1",
+            "點擊任務驚嘆號"
+        ],
+        "interrupt": [
+            "點擊X號"
+        ],
+        "on_error": "返回按鈕"
+    }
+}

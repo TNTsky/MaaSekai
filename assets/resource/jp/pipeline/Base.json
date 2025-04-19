@@ -3,6 +3,10 @@
         "action": "StartApp",
         "package": "com.sega.pjsekai"
     },
+    "世界計畫關閉": {
+        "action": "StopApp",
+        "package": "com.sega.pjsekai"
+    },
     "已在主畫面": {
         "recognition": "TemplateMatch",
         "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
@@ -26,9 +30,7 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "回到主畫面2"
-        ],
-        "interrupt": [
+            "回到主畫面2",
             "回到主畫面"
         ]
     },
@@ -151,5 +153,44 @@
         ],
         "threshold": 0.8,
         "action": "Click"
+    },
+    "點擊右下Live按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "主頁右下Live按鈕__1110_621_66_58__1060_571_166_149.png",
+        "roi": [
+            1060,
+            571,
+            166,
+            149
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 500
+    },
+    "選擇歌曲-初音天地開闢神話": {
+        "action": "Click",
+        "target": [
+            141,
+            26,
+            487,
+            32
+        ],
+        "post_delay": 500,
+        "next": [
+            "輸入歌曲-初音天地開闢神話"
+        ]
+    },
+    "輸入歌曲-初音天地開闢神話": {
+        "action": "InputText",
+        "input_text": "初音天地開闢神話",
+        "post_delay": 500,
+        "next": [
+            "按下Enter鍵"
+        ]
+    },
+    "按下Enter鍵": {
+        "action": "Key",
+        "key": 66,
+        "post_delay": 500
     }
 }

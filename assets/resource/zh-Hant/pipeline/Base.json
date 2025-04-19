@@ -3,6 +3,10 @@
         "action": "StartApp",
         "package": "com.hermes.mk.asia"
     },
+    "世界計畫關閉": {
+        "action": "StopApp",
+        "package": "com.hermes.mk.asia"
+    },
     "已在主畫面": {
         "recognition": "TemplateMatch",
         "template": "左上地圖按鈕__25_23_35_37__0_0_110_110.png",
@@ -26,7 +30,8 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "回到主畫面2"
+            "回到主畫面2",
+            "回到主畫面"
         ]
     },
     "回到主畫面2": {

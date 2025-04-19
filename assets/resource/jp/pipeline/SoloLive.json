@@ -1,0 +1,208 @@
+{
+    "單人Live": {
+        "post_delay": 1000,
+        "next": [
+            "點擊單人Live按鈕"
+        ],
+        "interrupt": [
+            "點擊右下Live按鈕",
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "確認跳過",
+            "點擊畫面上方"
+        ]
+    },
+    "點擊單人Live按鈕": {
+        "recognition": "TemplateMatch",
+        "template": "單人Live按鈕__655_173_223_150__605_123_323_250.png",
+        "roi": [
+            605,
+            123,
+            323,
+            250
+        ],
+        "threshold": 0.8,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "action": "Click",
+        "next": [
+            "決定單人歌曲",
+            "點擊單人Live按鈕"
+        ]
+    },
+    "決定單人歌曲": {
+        "recognition": "TemplateMatch",
+        "template": "決定歌曲按鈕__928_554_160_62__878_504_260_162.png",
+        "roi": [
+            878,
+            504,
+            260,
+            162
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "選擇第五隊伍",
+            "決定歌曲"
+        ]
+    },
+    "選擇第五隊伍": {
+        "action": "Click",
+        "target": [
+            445,
+            89,
+            74,
+            29
+        ],
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "開啟隊伍編成"
+        ]
+    },
+    "開啟隊伍編成": {
+        "recognition": "TemplateMatch",
+        "template": "隊伍編成按鈕__578_80_193_47__528_30_293_147.png",
+        "roi": [
+            528,
+            30,
+            293,
+            147
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "點擊隊伍編成確定鍵"
+        ]
+    },
+    "點擊隊伍編成確定鍵": {
+        "recognition": "TemplateMatch",
+        "template": "隊伍編成決定__652_627_219_59__602_577_319_143.png",
+        "roi": [
+            602,
+            577,
+            319,
+            143
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "開啟Solo-Auto"
+        ]
+    },
+    "開啟Solo-Auto": {
+        "recognition": "TemplateMatch",
+        "template": "Auto齒輪__630_642_47_45__580_592_147_128.png",
+        "roi": [
+            580,
+            592,
+            147,
+            128
+        ],
+        "threshold": 0.5,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1000
+        },
+        "next": [
+            "Auto決定"
+        ]
+    },
+    "Auto決定": {
+        "recognition": "TemplateMatch",
+        "template": "隊伍編成決定__652_627_219_59__602_577_319_143.png",
+        "roi": [
+            594,
+            575,
+            323,
+            145
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "開始單人Live"
+        ]
+    },
+    "開始單人Live": {
+        "recognition": "TemplateMatch",
+        "template": "開始挑戰Live按鈕__952_489_117_117__902_439_217_217.png",
+        "roi": [
+            902,
+            439,
+            217,
+            217
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "正在單人Live"
+        ]
+    },
+    "正在單人Live": {
+        "recognition": "TemplateMatch",
+        "template": "右上暫停按鈕__1195_16_57_58__1145_0_135_124.png",
+        "roi": [
+            1145,
+            0,
+            135,
+            124
+        ],
+        "threshold": 0.8,
+        "post_wait_freezes": {
+            "time": 10000
+        },
+        "timeout": 1800000,
+        "rate_limit": 5000,
+        "next": [
+            "單人Live結束"
+        ]
+    },
+    "單人Live結束": {
+        "recognition": "TemplateMatch",
+        "template": "單人Live結束__551_268_174_122__501_218_274_222.png",
+        "roi": [
+            501,
+            218,
+            274,
+            222
+        ],
+        "rate_limit": 5000,
+        "threshold": 0.5,
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "已在主畫面"
+        ],
+        "interrupt": [
+            "點擊挑戰Live按鈕",
+            "回到主畫面",
+            "返回按鈕",
+            "點擊X號",
+            "跳過劇情對話",
+            "點擊跳過按鈕",
+            "確認跳過",
+            "點擊畫面上方"
+        ]
+    }
+}
