@@ -179,6 +179,7 @@
             "time": 10000,
             "rate_limit": 1000
         },
+        "rate_limit": 200000,
         "timeout": 1800000,
         "next": [
             "挑戰Live結束"

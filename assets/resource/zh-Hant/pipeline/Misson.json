@@ -27,10 +27,13 @@
         "threshold": 0.8,
         "action": "Click",
         "post_delay": 500,
+        "timeout": 5000,
         "next": [
-            "打開任務列表",
             "點擊領取全部-1",
-            "返回按鈕"
+            "點擊任務驚嘆號"
+        ],
+        "interrupt": [
+            "點擊X號"
         ]
     },
     "點擊領取全部-1": {
@@ -54,12 +57,35 @@
         "count": 5000,
         "action": "Click",
         "post_delay": 500,
+        "timeout": 5000,
         "next": [
-            "已在主畫面"
+            "點擊領取全部-1",
+            "點擊任務驚嘆號"
         ],
         "interrupt": [
-            "返回按鈕",
-            "點擊畫面上方"
+            "點擊X號"
         ]
+    },
+    "點擊任務驚嘆號": {
+        "recognition": "TemplateMatch",
+        "template": "驚嘆號提示__142_356_22_24__92_306_122_124.png",
+        "roi": [
+            79,
+            31,
+            156,
+            420
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 5000,
+        "next": [
+            "點擊領取全部-1",
+            "點擊任務驚嘆號"
+        ],
+        "interrupt": [
+            "點擊X號"
+        ],
+        "on_error": "返回按鈕"
     }
 }

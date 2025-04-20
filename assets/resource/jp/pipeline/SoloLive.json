@@ -172,7 +172,7 @@
             "time": 10000
         },
         "timeout": 1800000,
-        "rate_limit": 5000,
+        "rate_limit": 200000,
         "next": [
             "單人Live結束"
         ]
