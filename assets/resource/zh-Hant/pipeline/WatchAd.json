@@ -72,7 +72,7 @@
             0,
             0
         ],
-        "threshold": 0.64,
+        "threshold": 0.50,
         "action": "Click",
         "next": [
             "點擊CM"

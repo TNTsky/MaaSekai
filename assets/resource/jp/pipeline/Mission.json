@@ -48,6 +48,7 @@
         "action": "Click",
         "post_delay": 500,
         "timeout": 5000,
+        "threshold": 0.9,
         "next": [
             "點擊領取全部-1",
             "點擊任務驚嘆號"
