@@ -3,7 +3,11 @@
         "post_delay": 3000,
         "next": [
             "打開地圖",
-            "前往十字路口"
+            "前往十字路口",
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4"
         ],
         "interrupt": [
             "回到主畫面",
@@ -168,45 +172,143 @@
             "time": 500
         },
         "next": [
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
+            "廣告結束-1"
+        ],
+        "interrupt": [
             "等待廣告"
         ]
     },
-    "等待廣告": {
-        "action": "DoNothing",
+    "關閉廣告1": {
+        "recognition": "TemplateMatch",
+        "template": "廣告右上X__1182_37_30_27__1132_0_130_114.png",
+        "threshold": 0.7,
+        "roi": [
+            0,
+            0,
+            1280,
+            77
+        ],
+        "action": "Click",
         "post_wait_freezes": {
             "time": 500
         },
-        "post_delay": 10000,
-        "timeout": 150000,
+        "timeout": 15000,
         "next": [
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
             "點擊CM",
             "觀看廣告",
-            "開始觀看",
-            "嘗試關閉廣告"
+            "開始觀看"
         ]
     },
-    "嘗試關閉廣告": {
-        "action": "StartApp",
-        "package": "app.lawnchair",
-        "post_delay": 500,
+    "關閉廣告2": {
+        "recognition": "TemplateMatch",
+        "template": "左上關閉廣告__19_21_23_20__0_0_92_91.png",
+        "threshold": 0.7,
+        "roi": [
+            0,
+            0,
+            92,
+            91
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
         "next": [
-            "嘗試關閉廣告-2"
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
         ]
     },
-    "嘗試關閉廣告-2": {
-        "action": "StartApp",
-        "package": "com.sega.pjsekai",
-        "post_delay": 500,
+    "關閉廣告3": {
+        "recognition": "TemplateMatch",
+        "template": "關閉廣告3__1171_50_37_32__1121_0_137_132.png",
+        "threshold": 0.7,
+        "roi": [
+            1021,
+            0,
+            259,
+            159
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
         "next": [
-            "嘗試關閉廣告-3"
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
         ]
     },
-    "嘗試關閉廣告-3": {
-        "action": "Key",
-        "key": 111,
-        "post_delay": 2000,
+    "關閉廣告4": {
+        "recognition": "TemplateMatch",
+        "template": "廣告箭頭跳過__1225_0_55_55__1175_0_105_105.png",
+        "threshold": 0.5,
+        "roi": [
+            1175,
+            0,
+            105,
+            105
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
         "next": [
-            "等待廣告"
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
         ]
+    },
+    "廣告結束-1": {
+        "recognition": "TemplateMatch",
+        "template": "廣告結束1__1062_8_209_56__1012_0_268_114.png",
+        "roi": [
+            1012,
+            0,
+            268,
+            114
+        ],
+        "action": "Click",
+        "target": [
+            1234,
+            24,
+            22,
+            25
+        ],
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "關閉廣告1",
+            "關閉廣告2",
+            "關閉廣告3",
+            "關閉廣告4",
+            "點擊CM",
+            "觀看廣告",
+            "開始觀看"
+        ]
+    },
+    "等待廣告": {
+        "action": "DoNothing"
     }
 }

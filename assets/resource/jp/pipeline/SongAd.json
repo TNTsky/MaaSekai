@@ -5,10 +5,7 @@
         },
         "next": [
             "打開地圖-2",
-            "前往唱片行",
-            "關閉廣告1-2",
-            "關閉廣告2-2",
-            "廣告結束1-1"
+            "前往唱片行"
         ],
         "interrupt": [
             "回到主畫面",
@@ -174,7 +171,7 @@
             290,
             131
         ],
-        "threshold": 0.999999,
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "開始觀看-2"
@@ -192,77 +189,45 @@
         "threshold": 0.9,
         "action": "Click",
         "next": [
-            "關閉廣告1-2",
-            "關閉廣告2-2",
-            "廣告結束1-1"
-        ],
-        "interrupt": [
-            "等待廣告-2"
+            "等待廣告2"
         ]
     },
-    "關閉廣告1-2": {
-        "recognition": "TemplateMatch",
-        "template": "廣告右上X__1182_37_30_27__1132_0_130_114.png",
-        "threshold": 0.7,
-        "roi": [
-            1132,
-            0,
-            130,
-            114
-        ],
-        "action": "Click",
-        "next": [
-            "返回按鈕"
-        ],
-        "interrupt": [
-            "點擊畫面上方"
-        ]
-    },
-    "關閉廣告2-2": {
-        "recognition": "TemplateMatch",
-        "template": "左上關閉廣告__19_21_23_20__0_0_92_91.png",
-        "threshold": 0.7,
-        "roi": [
-            0,
-            0,
-            92,
-            91
-        ],
-        "action": "Click",
-        "next": [
-            "返回按鈕"
-        ],
-        "interrupt": [
-            "點擊畫面上方"
-        ]
-    },
-    "廣告結束1-1": {
-        "recognition": "TemplateMatch",
-        "template": "廣告結束1__1062_8_209_56__1012_0_268_114.png",
-        "roi": [
-            1012,
-            0,
-            268,
-            114
-        ],
-        "action": "Click",
-        "target": [
-            1234,
-            24,
-            22,
-            25
-        ],
+    "等待廣告2": {
+        "action": "DoNothing",
         "post_wait_freezes": {
             "time": 500
         },
+        "post_delay": 10000,
+        "timeout": 150000,
         "next": [
             "返回按鈕"
         ],
         "interrupt": [
-            "點擊畫面上方"
+            "嘗試關閉廣告1"
         ]
     },
-    "等待廣告-2": {
-        "action": "DoNothing"
+    "嘗試關閉廣告1": {
+        "action": "StartApp",
+        "package": "app.lawnchair",
+        "post_delay": 500,
+        "next": [
+            "嘗試關閉廣告1-2"
+        ]
+    },
+    "嘗試關閉廣告1-2": {
+        "action": "StartApp",
+        "package": "com.sega.pjsekai",
+        "post_delay": 500,
+        "next": [
+            "嘗試關閉廣告1-3"
+        ]
+    },
+    "嘗試關閉廣告1-3": {
+        "action": "Key",
+        "key": 111,
+        "post_delay": 2000,
+        "next": [
+            "等待廣告2"
+        ]
     }
 }
