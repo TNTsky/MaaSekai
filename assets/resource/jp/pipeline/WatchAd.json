@@ -122,7 +122,7 @@
         "roi": [
             1,
             139,
-            1280,
+            1150,
             109
         ],
         "threshold": 0.4,
@@ -176,19 +176,23 @@
         "post_wait_freezes": {
             "time": 500
         },
-        "post_delay": 10000,
+        "post_delay": 200,
         "timeout": 150000,
         "next": [
+            "廣告已全部觀看",
             "點擊CM",
             "觀看廣告",
-            "開始觀看",
+            "開始觀看"
+        ],
+        "interrupt": [
             "嘗試關閉廣告"
         ]
     },
     "嘗試關閉廣告": {
         "action": "Key",
         "key": 3,
-        "post_delay": 500,
+        "pre_delay": 10000,
+        "post_delay": 100,
         "next": [
             "嘗試關閉廣告-2"
         ]
@@ -196,7 +200,7 @@
     "嘗試關閉廣告-2": {
         "action": "StartApp",
         "package": "com.sega.pjsekai",
-        "post_delay": 500,
+        "post_delay": 100,
         "next": [
             "嘗試關閉廣告-3"
         ]
