@@ -2,6 +2,7 @@
     "世界計畫啟動": {
         "action": "StartApp",
         "package": "com.sega.pjsekai",
+        "post_delay": 500,
         "next": [
             "通知頁面",
             "遊戲內",
