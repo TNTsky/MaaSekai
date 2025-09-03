@@ -58,6 +58,34 @@
         {
             "name": "單人Live",
             "entry": "單人Live"
+        },
+        {
+            "name": "虛擬Live",
+            "entry": "virtual_live"
+        },
+        {
+            "name": "活動劇情",
+            "entry": "event_story"
+        },
+        {
+            "name": "活動商店",
+            "entry": "event_store"
+        },
+        {
+            "name": "關閉遊戲",
+            "entry": "世界計畫關閉"
+        },
+        {
+            "name": "参数任务",
+            "entry": "MyTask3",
+            "option": [
+                "任务选项1"
+            ],
+            "pipeline_override": {}
+        },
+        {
+            "name": "带Custom的任务",
+            "entry": "MyTask4"
         }
     ],
     "option": {
