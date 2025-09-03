@@ -255,7 +255,40 @@
             "time": 500
         },
         "next": [
+            "Play商店更新",
             "加載資料中",
+            "回到遊戲畫面"
+        ]
+    },
+    "Play商店更新": {
+        "recognition": "TemplateMatch",
+        "template": "Google Play 更新.png",
+        "roi": [
+            -1,
+            202,
+            773,
+            517
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "post_delay": 5000,
+        "timeout": 300000,
+        "next": [
+            "Play更新完成"
+        ]
+    },
+    "Play更新完成": {
+        "recognition": "TemplateMatch",
+        "template": "Google Play 更新完成.png",
+        "roi": [
+            -1,
+            202,
+            773,
+            517
+        ],
+        "threshold": 0.98,
+        "action": "Click",
+        "next": [
             "回到遊戲畫面"
         ]
     }
