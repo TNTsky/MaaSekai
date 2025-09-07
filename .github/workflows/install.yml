@@ -110,8 +110,9 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaSekai-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
+          retention-days: 7
 
   changelog:
     name: Generate changelog
