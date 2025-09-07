@@ -21,12 +21,6 @@
             ]
         }
     ],
-    "agent": {
-        "child_exec": "python",
-        "child_args": [
-            "{PROJECT_DIR}/../agent/main.py"
-        ]
-    },
     "task": [
         {
             "name": "啟動遊戲",
