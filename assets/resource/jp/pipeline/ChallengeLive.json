@@ -204,6 +204,8 @@
             "已在主畫面"
         ],
         "interrupt": [
+            "領取七天累積獎勵",
+            "領取七天累積獎勵-2",
             "點擊挑戰Live按鈕",
             "回到主畫面",
             "返回按鈕",
@@ -213,5 +215,41 @@
             "確認跳過",
             "點擊畫面上方"
         ]
+    },
+    "領取七天累積獎勵": {
+        "recognition": "TemplateMatch",
+        "template": "七天累積獎勵-水晶.png",
+        "roi": [
+            327,
+            236,
+            202,
+            201
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        },
+        "next": [
+            "領取七天累積獎勵-2"
+        ],
+        "interrupt": [
+            "領取七天累積獎勵"
+        ]
+    },
+    "領取七天累積獎勵-2": {
+        "recognition": "TemplateMatch",
+        "template": "七天累積獎勵-確定領取.png",
+        "roi": [
+            523,
+            428,
+            510,
+            235
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500
+        }
     }
 }
