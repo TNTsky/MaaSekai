@@ -52,6 +52,10 @@
         {
             "name": "單人Live",
             "entry": "單人Live"
+        },
+        {
+            "name": "關閉遊戲",
+            "entry": "世界計畫關閉"
         }
     ],
     "option": {
