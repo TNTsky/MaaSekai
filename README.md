@@ -1,6 +1,6 @@
 <div align="center">
   <h2>MaaSekai</h2>
-  <p>基於 <a href="https://github.com/MaaXYZ/MaaFramework">MaaFramework</a> 製作的世界計畫台/日服自動助手 🎵</p>
+  <p>基於 <a href="https://github.com/MaaXYZ/MaaFramework">MaaFramework</a> 製作的世界計畫日服自動助手 🎵</p>
 </div>
 
 > [!IMPORTANT]  
@@ -30,7 +30,9 @@
 - [ ] 活動交換所
 - [ ] 虛擬 Live (演唱會)
 
-### 台服
+### ~~台服~~
+
+> (不怎麼玩台服所以基本未開發 🙈)
 
 - [x] 啟動遊戲並帳號登入
 - [ ] 更新遊戲
@@ -42,8 +44,6 @@
 - [x] 領取任務獎勵  
   > 可能存在問題
 - [x] 關閉遊戲
-
-> (不怎麼玩台服所以功能開發有限 🙈)
 
 ---
 
