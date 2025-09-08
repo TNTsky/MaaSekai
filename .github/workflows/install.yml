@@ -112,7 +112,6 @@ jobs:
         with:
           name: MaaSekai-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
-          retention-days: 7
 
   changelog:
     name: Generate changelog
