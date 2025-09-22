@@ -149,7 +149,8 @@
         },
         "next": [
             "開始觀看",
-            "觀看廣告"
+            "觀看廣告",
+            "廣告已全部觀看"
         ],
         "timeout": 5000
     },
@@ -168,7 +169,8 @@
             "time": 500
         },
         "next": [
-            "等待廣告"
+            "等待廣告",
+            "廣告已全部觀看"
         ]
     },
     "等待廣告": {
@@ -190,7 +192,7 @@
     },
     "嘗試關閉廣告": {
         "action": "StartApp",
-        "package": "app.lawnchair",
+        "package": "com.sega.pjsekai",
         "pre_delay": 10000,
         "post_delay": 100,
         "next": [
@@ -198,17 +200,9 @@
         ]
     },
     "嘗試關閉廣告-2": {
-        "action": "StartApp",
-        "package": "com.sega.pjsekai",
-        "post_delay": 100,
-        "next": [
-            "嘗試關閉廣告-3"
-        ]
-    },
-    "嘗試關閉廣告-3": {
-        "action": "Key",
+        "action": "ClickKey",
         "key": 4,
-        "post_delay": 2000,
+        "post_delay": 1000,
         "next": [
             "等待廣告"
         ]
